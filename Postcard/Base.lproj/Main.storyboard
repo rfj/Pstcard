@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jPp-YZ-vwQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,9 +20,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sagrada_Familia.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-s5-IgC">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,6 +129,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiN-aq-5P3" userLabel="nameLabel">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="26" y="148" width="42" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -143,10 +150,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="enA-ya-QPr" secondAttribute="trailing" constant="10" id="PuA-4T-PSV"/>
                             <constraint firstItem="vSS-Ka-PIf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="UEo-zX-Clp"/>
                             <constraint firstItem="hRU-fy-Ss8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="cZt-KD-n1L"/>
+                            <constraint firstItem="PiN-aq-5P3" firstAttribute="top" secondItem="GWp-AC-di7" secondAttribute="bottom" constant="30" id="kGM-lQ-jnU"/>
                             <constraint firstItem="vSS-Ka-PIf" firstAttribute="top" secondItem="enA-ya-QPr" secondAttribute="bottom" constant="10" id="opi-cB-EpD"/>
+                            <constraint firstItem="hRU-fy-Ss8" firstAttribute="leading" secondItem="PiN-aq-5P3" secondAttribute="trailing" constant="10" id="puB-wH-SCu"/>
                             <constraint firstItem="GWp-AC-di7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="qlZ-jA-b2z"/>
                             <constraint firstItem="hRU-fy-Ss8" firstAttribute="leading" secondItem="GWp-AC-di7" secondAttribute="trailing" constant="10" id="tdn-H2-Epe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hRU-fy-Ss8" secondAttribute="trailing" constant="10" id="vkz-IJ-NbJ"/>
+                            <constraint firstItem="PiN-aq-5P3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="wkT-E3-mPx"/>
                             <constraint firstItem="aaJ-MC-nVn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="wro-22-OQB"/>
                         </constraints>
                         <variation key="default">
@@ -156,10 +166,13 @@
                                 <exclude reference="vSS-Ka-PIf"/>
                                 <exclude reference="aaJ-MC-nVn"/>
                                 <exclude reference="GWp-AC-di7"/>
+                                <exclude reference="PiN-aq-5P3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Npr-i0-bBD"/>
                                 <exclude reference="qlZ-jA-b2z"/>
+                                <exclude reference="kGM-lQ-jnU"/>
+                                <exclude reference="wkT-E3-mPx"/>
                                 <exclude reference="AyF-hb-Atm"/>
                                 <exclude reference="Fol-Qr-thS"/>
                                 <exclude reference="PuA-4T-PSV"/>
@@ -167,6 +180,7 @@
                                 <exclude reference="UEo-zX-Clp"/>
                                 <exclude reference="opi-cB-EpD"/>
                                 <exclude reference="cZt-KD-n1L"/>
+                                <exclude reference="puB-wH-SCu"/>
                                 <exclude reference="tdn-H2-Epe"/>
                                 <exclude reference="vkz-IJ-NbJ"/>
                                 <exclude reference="4qs-WK-SF7"/>
@@ -181,10 +195,13 @@
                                 <include reference="vSS-Ka-PIf"/>
                                 <include reference="aaJ-MC-nVn"/>
                                 <include reference="GWp-AC-di7"/>
+                                <include reference="PiN-aq-5P3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Npr-i0-bBD"/>
                                 <include reference="qlZ-jA-b2z"/>
+                                <include reference="kGM-lQ-jnU"/>
+                                <include reference="wkT-E3-mPx"/>
                                 <include reference="AyF-hb-Atm"/>
                                 <include reference="Fol-Qr-thS"/>
                                 <include reference="PuA-4T-PSV"/>
@@ -192,6 +209,7 @@
                                 <include reference="UEo-zX-Clp"/>
                                 <include reference="opi-cB-EpD"/>
                                 <include reference="cZt-KD-n1L"/>
+                                <include reference="puB-wH-SCu"/>
                                 <include reference="tdn-H2-Epe"/>
                                 <include reference="vkz-IJ-NbJ"/>
                                 <include reference="4qs-WK-SF7"/>
@@ -205,6 +223,7 @@
                         <outlet property="enterNameTextfield" destination="enA-ya-QPr" id="Jh6-Gu-F0V"/>
                         <outlet property="mailButton" destination="aaJ-MC-nVn" id="8Ao-BK-WEE"/>
                         <outlet property="messageLabel" destination="GWp-AC-di7" id="Z4C-RW-nOW"/>
+                        <outlet property="nameLabel" destination="PiN-aq-5P3" id="3X2-K6-n1H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
